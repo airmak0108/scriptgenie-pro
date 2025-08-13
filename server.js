@@ -30,7 +30,7 @@ dotenv.config();
 const DEMO_MODE = (process.env.DEMO_MODE ?? 'true').toLowerCase() === 'true';
 const PORT = process.env.PORT || 3000;
 
-const { default: OpenAI } = require('openai');
+const OpenAI = require('openai');
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
 if (!process.env.OPENAI_API_KEY) {
